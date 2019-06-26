@@ -8,6 +8,7 @@ module.exports = function(config) {
         ui: join(config.dirs.src, 'ui'),
         store: join(config.dirs.src, 'store'),
         containers: join(config.dirs.src, 'containers'),
+        utils: join(config.dirs.src, 'utils'),
       },
     },
     module: {
