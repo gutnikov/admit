@@ -1,5 +1,6 @@
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const { DefinePlugin } = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function({ dirs, production, assetHashLength }) {
   const bundleName = `[name].[chunkhash:${assetHashLength}].js`;
@@ -25,6 +26,9 @@ module.exports = function({ dirs, production, assetHashLength }) {
       }),
       new DefinePlugin({
         DEBUG: !production,
+      }),
+      new HtmlWebpackPlugin({
+        template: 'index.ejs',
       }),
     ],
     resolveLoader: {
