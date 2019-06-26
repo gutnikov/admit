@@ -34,7 +34,17 @@
     "@babel/preset-env": "7.3.4",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "^7.1.0",
-    "@babel/traverse": "7.4.4"
+    "@babel/traverse": "7.4.4",
+    "connected-react-router": "^6.4.0",
+    "history": "4.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "6.0.1",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
+    "redux": "4.0.1",
+    "redux-logger": "3.0.6",
+    "redux-thunk": "2.3.0"
   },
   "devDependencies": {
     "@types/classnames": "2.2.7",
