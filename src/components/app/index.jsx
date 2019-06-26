@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import Button from '@material-ui/core/Button';
+
 const dispatchInit = function() {
   return {
     type: 'INIT',
@@ -14,11 +16,15 @@ export class App extends React.Component {
   }
 
   render() {
-    return <div>App is ehre</div>;
+    return (
+      <Button variant="contained" color="primary">
+        imabutton!
+      </Button>
+    );
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps() {
   return {};
 }
 
