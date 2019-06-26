@@ -10,7 +10,7 @@ const dispatchInit = function() {
   };
 };
 
-export class App extends React.Component {
+class App extends React.Component {
   componentDidMount() {
     this.props.actions.dispatchInit();
   }

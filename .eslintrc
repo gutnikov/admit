@@ -2,6 +2,8 @@
   "extends": "airbnb",
   "rules": {
     "space-before-function-paren": ["error", "never"],
-    "react/destructuring-assignment": ["error", "never"]
+    "react/destructuring-assignment": ["error", "never"],
+    "react/prop-types": [false],
+    "react/jsx-filename-extension": [false]
   }
 }
