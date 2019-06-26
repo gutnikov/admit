@@ -6,6 +6,7 @@ module.exports = function({ dirs }) {
       contentBase: path.join(dirs.dist),
       compress: false,
       port: 9000,
+      historyApiFallback: true,
     },
   };
 };

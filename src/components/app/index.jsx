@@ -2,24 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Button from '@material-ui/core/Button';
+import { Switch, Route, Link } from 'react-router-dom';
+import { ConnectedRouter as Router } from 'connected-react-router';
+import { history } from '../../store';
 
-const dispatchInit = function() {
-  return {
-    type: 'INIT',
-  };
-};
+import Main from './routes/main';
+import Reports from './routes/reports';
 
 class App extends React.Component {
-  componentDidMount() {
-    this.props.actions.dispatchInit();
-  }
+  componentDidMount() {}
 
   render() {
     return (
-      <Button variant="contained" color="primary">
-        imabutton!
-      </Button>
+      <Router history={history}>
+        <div>
+          <Link to="/reports">Reports</Link>
+          <Link to="/">Main</Link>
+          <Switch>
+            <Route path="/" exact component={Main} />
+            <Route path="/reports" exact component={Reports} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
@@ -30,12 +34,7 @@ function mapStateToProps() {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(
-      {
-        dispatchInit,
-      },
-      dispatch,
-    ),
+    actions: bindActionCreators({}, dispatch),
   };
 }
 
