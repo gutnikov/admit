@@ -7,10 +7,11 @@ const options = {
   production: process.env.NODE_ENV === 'production',
   dirs: {
     src: path.join(__dirname, 'src'),
+    dist: path.join(__dirname, 'dist'),
   },
   assetHashLength: 10,
 };
 
 module.exports = function() {
-  return webpackMerge.smart(parts.map(part => part(options)));
+  return webpackMerge.smart(parts(options).map(part => part(options)));
 };

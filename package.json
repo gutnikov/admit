@@ -7,7 +7,8 @@
     "deps": "npm i",
     "copy-public": "cp -r ./public/* ./dist",
     "clean": "rm -fr ./dist",
-    "build": "npm run clean && npm run deps && node ./node_modules/.bin/webpack && npm run copy-public"
+    "build": "npm run clean && npm run deps && node ./node_modules/.bin/webpack && npm run copy-public",
+    "dev": "npm run deps && node ./node_modules/.bin/webpack-dev-server --devtool inline-cheap-source-map --progress"
   },
   "keywords": [],
   "author": "",
